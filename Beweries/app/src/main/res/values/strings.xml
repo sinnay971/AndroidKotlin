@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Beweries</string>
+    <string name="brewery">Brasserie</string>
+
+    <string name="delete_brewery_warning">Voulez-vous vraiment supprimer la brasserie %1$s?</string>
+
+    <string name="breweries_loaded">Les brasseries ont bien été récupérés.</string>
+    <string name="breweries_loading_error">Désolé, une erreur a empêché la récupération des brasseries.</string>
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+            <variable name="viewModel" type="com.yannis.hebreu.beweries.ui.brewery.detail.DetailBreweryViewModel"/>
+        </data>
+
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+            style="@style/Toolbar"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@{viewModel.brewery.name}"/>
+    <WebView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:id="@+id/webView"
+            app:loadUrl="@{viewModel.brewery.websiteUrl}"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+                    <!--        row 1      !-->
+
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/labelState"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/marginTop"
+                  android:text = "State :"
+                  style="@style/StaticLabel"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+       <TextView android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/marginTop"
+                 style="@style/StaticLabel"
+                 android:id="@+id/labelType"
+                 android:text = "Type :"
+                 app:layout_constraintEnd_toStartOf="@id/type"
+                 app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/marginTop"
+                  style="@style/Champs"
+                  tools:text="Arizona"
+                  android:text = "@{viewModel.brewery.state}"
+                  app:layout_constraintStart_toEndOf="@id/labelState"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/marginTop"
+                  style="@style/Champs"
+                  android:id="@+id/type"
+                  tools:text="micro"
+                  android:text = "@{viewModel.brewery.breweryType}"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+                    <!--      row 2!     -->
+
+        <TextView android:layout_width="wrap_content"
+                  android:id="@+id/labelCity"
+                  android:layout_height="wrap_content"
+                  android:text = "City :"
+                  style="@style/StaticLabel"
+                  android:layout_marginTop="@dimen/marginTop"
+                  app:layout_constraintTop_toBottomOf="@id/labelState"
+                  app:layout_constraintStart_toStartOf="parent"
+                  />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/labelCountry"
+                  android:layout_marginTop="@dimen/marginTop"
+                  style="@style/StaticLabel"
+                  android:text = "Country :"
+                  app:layout_constraintEnd_toStartOf="@id/country"
+                  app:layout_constraintTop_toBottomOf="@id/labelType"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text = "@{viewModel.brewery.city}"
+                  style="@style/Champs"
+                  tools:text="Tucson"
+                  android:layout_marginTop="@dimen/marginTop"
+                  app:layout_constraintTop_toBottomOf="@id/labelState"
+                  app:layout_constraintStart_toEndOf="@id/labelCity"
+        />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/marginTop"
+                  android:id="@+id/country"
+                  style="@style/Champs"
+                  tools:text="United States"
+                  android:text = "@{viewModel.brewery.country}"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toBottomOf="@id/labelType"/>
+
+                <!--      Line !     -->
+        <View
+                style="@style/Divider"
+                android:id="@+id/lineDivider"
+                app:layout_constraintTop_toBottomOf="@id/labelCountry"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/marginTop"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.527"/>
+
+                <!--      footer !     -->
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="24dp"
+                  android:textStyle="italic"
+                  tools:text="1664 S Research Loop Ste 200"
+                  android:text="@{viewModel.brewery.street}"
+                  app:layout_constraintTop_toBottomOf="@id/lineDivider" app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginStart="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
+</layout>
