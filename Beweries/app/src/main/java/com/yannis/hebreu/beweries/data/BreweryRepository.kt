@@ -29,9 +29,6 @@ class BreweryRepository: KoinComponent {
         Log.d("breweryRepository","inserting breweries: $breweries")
     }
 
-    fun insert(brewery: Brewery) =
-        insertAll(listOf(brewery))
-
     fun delete(brewery: Brewery) = doAsync { breweryDAO.delete(brewery) }
 
     fun getById(id: Int): LiveData<Brewery> = breweryDAO.getBeweryById(id)

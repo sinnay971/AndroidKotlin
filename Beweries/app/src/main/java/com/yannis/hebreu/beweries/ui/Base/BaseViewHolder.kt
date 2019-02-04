@@ -1,6 +1,5 @@
-package com.yannis.hebreu.beweries.ui.Base
+package com.yannis.hebreu.beweries.ui.base
 
-import android.widget.AdapterView
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView

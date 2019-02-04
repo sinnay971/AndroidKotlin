@@ -1,6 +1,5 @@
 package com.yannis.hebreu.beweries.ui.brewery.list
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -8,8 +7,8 @@ import androidx.lifecycle.LifecycleOwner
 import com.yannis.hebreu.beweries.R
 import com.yannis.hebreu.beweries.data.model.Brewery
 import com.yannis.hebreu.beweries.databinding.ItemBreweryBinding
-import com.yannis.hebreu.beweries.ui.Base.BaseAdapter
-import com.yannis.hebreu.beweries.ui.Base.BaseViewHolder
+import com.yannis.hebreu.beweries.ui.base.BaseAdapter
+import com.yannis.hebreu.beweries.ui.base.BaseViewHolder
 import com.yannis.hebreu.beweries.utils.OnItemClickListener
 
 class BreweriesAdapter(lifecycleOwner: LifecycleOwner): BaseAdapter<Brewery>(lifecycleOwner) {

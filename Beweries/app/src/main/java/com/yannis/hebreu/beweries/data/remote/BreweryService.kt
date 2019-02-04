@@ -10,8 +10,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface BreweryService {
-    @GET("breweries/{bewery}")
-    fun getBrewery(@Path("bewery") id: Int): Observable<BreweryResponse>
 
     @GET("breweries")
     fun getBeweries(): Observable<List<BreweryResponse>>

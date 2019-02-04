@@ -1,6 +1,5 @@
-package com.yannis.hebreu.beweries.ui.Base
+package com.yannis.hebreu.beweries.ui.base
 
-import android.widget.AdapterView
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.ListAdapter
 import com.yannis.hebreu.beweries.data.model.BaseObject

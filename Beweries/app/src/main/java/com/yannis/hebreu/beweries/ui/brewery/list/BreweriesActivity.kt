@@ -12,7 +12,7 @@ import com.yannis.hebreu.beweries.databinding.ActivityMainBinding
 import com.yannis.hebreu.beweries.extension.showAction
 import com.yannis.hebreu.beweries.extension.showError
 import com.yannis.hebreu.beweries.extension.startAnimatedActivity
-import com.yannis.hebreu.beweries.ui.Base.BaseActivity
+import com.yannis.hebreu.beweries.ui.base.BaseActivity
 import com.yannis.hebreu.beweries.ui.brewery.detail.BreweryDetailActivity
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.intentFor
